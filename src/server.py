@@ -64,7 +64,7 @@ class Server(object):
     def encodedHttpResponse(status: int, contentType: str, body: bytes):
         httpVersion = 'HTTP/1.1'
         statusMessage = 'OK' if status == 200 else 'Not Found'
-        date = 'Sun, 18 Oct 2012 10:36:20 GMT'
+        date = datetime.now().strftime("%a, %d %b %Y %H:%M:%S %Z")
         server = 'Python Server'
         contentLenght = len(body)
         connection = 'Closed'
